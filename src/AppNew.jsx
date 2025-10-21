@@ -9,6 +9,7 @@ import AuthModal from './components/AuthModal'
 import HUDPanels from './components/HUDPanels'
 import ParticleField from './components/ParticleField'
 import { Mic, MicOff, MessageSquare, Calendar, Settings, Power, LogOut, User, X, Volume2 } from 'lucide-react'
+import { API_ENDPOINTS } from './config'
 
 function App() {
   const [isListening, setIsListening] = useState(false)
@@ -45,7 +46,7 @@ function App() {
         headers['Authorization'] = `Bearer ${token}`
       }
       
-      const response = await fetch('http://localhost:5000/api/tasks', { headers })
+      const response = await fetch(API_ENDPOINTS.tasks, { headers })
       const data = await response.json()
       if (data.tasks) {
         setTasks(data.tasks)
@@ -270,7 +271,7 @@ function App() {
         headers['Authorization'] = `Bearer ${token}`
       }
       
-      const response = await fetch('http://localhost:5000/api/voice-command', {
+      const response = await fetch(API_ENDPOINTS.voiceCommand, {
         method: 'POST',
         headers,
         body: JSON.stringify({ command, sessionId })
@@ -383,7 +384,7 @@ function App() {
     setMessages(prev => [...prev, userMessage])
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch(API_ENDPOINTS.chat, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, userId: user?.id, sessionId: `${sessionId}_chat` })

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { X, Volume2, Mic, Bell, Shield, Database, Zap, User } from 'lucide-react'
+import { API_URL } from '../config'
 
 function SettingsPanel({ onClose, user, systemStatus }) {
   const [settings, setSettings] = useState({
@@ -266,7 +267,7 @@ function SettingsPanel({ onClose, user, systemStatus }) {
               <p className="text-white text-sm">Backend Status</p>
               <span className="px-2 py-1 rounded text-xs bg-green-500/20 text-green-400">Connected</span>
             </div>
-            <p className="text-xs text-jarvis-blue/60 mb-1">API: http://localhost:5000</p>
+            <p className="text-xs text-jarvis-blue/60 mb-1">API: {API_URL}</p>
             <p className="text-xs text-jarvis-blue/60">Database: Supabase</p>
           </div>
         </div>
