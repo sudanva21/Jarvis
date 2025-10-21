@@ -1,0 +1,32 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Ring -->
+  <circle cx="32" cy="32" r="30" stroke="#00d9ff" stroke-width="2" fill="none" opacity="0.3"/>
+  <circle cx="32" cy="32" r="26" stroke="#00d9ff" stroke-width="1.5" fill="none" opacity="0.5"/>
+  
+  <!-- Core Circle -->
+  <circle cx="32" cy="32" r="18" fill="url(#coreGradient)"/>
+  
+  <!-- Inner Glow -->
+  <circle cx="32" cy="32" r="12" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Energy Lines -->
+  <line x1="32" y1="8" x2="32" y2="18" stroke="#00d9ff" stroke-width="2" opacity="0.7"/>
+  <line x1="32" y1="46" x2="32" y2="56" stroke="#00d9ff" stroke-width="2" opacity="0.7"/>
+  <line x1="8" y1="32" x2="18" y2="32" stroke="#00d9ff" stroke-width="2" opacity="0.7"/>
+  <line x1="46" y1="32" x2="56" y2="32" stroke="#00d9ff" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Diagonal Lines -->
+  <line x1="14" y1="14" x2="22" y2="22" stroke="#00d9ff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="50" y1="14" x2="42" y2="22" stroke="#00d9ff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="14" y1="50" x2="22" y2="42" stroke="#00d9ff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="50" y1="50" x2="42" y2="42" stroke="#00d9ff" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="coreGradient">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#00d9ff"/>
+      <stop offset="100%" stop-color="#0088aa"/>
+    </radialGradient>
+  </defs>
+</svg>
